@@ -38,8 +38,7 @@ static void prvTaskRing( void *t_arg )
     TaskHandle_t l_task_id = * ( TaskHandle_t * ) t_arg;
     while ( 1 )
     {
-        vTaskDelay( 5000 );
-        console_print( "알람! 알람! 알람!\n" );
+
         vTaskResume( l_task_id );
     }
 }
