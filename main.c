@@ -64,8 +64,7 @@ int main()
 
     // Three tasks
     xTaskCreate( prvTaskHello, "Sleep", configMINIMAL_STACK_SIZE, NULL, configMAX_PRIORITIES - 4, NULL );
-    xTaskCreate( prvTaskSleep, "PutOff", configMINIMAL_STACK_SIZE, NULL, configMAX_PRIORITIES - 3, &l_handle );
-    xTaskCreate( prvTaskRing, "Ring", configMINIMAL_STACK_SIZE, &l_handle, configMAX_PRIORITIES - 2, NULL );
+
 
     // Start scheduler
     vTaskStartScheduler();
